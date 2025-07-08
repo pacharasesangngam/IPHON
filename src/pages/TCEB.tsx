@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useRef } from "react";
 import { Row, Col, Space, Typography, Card, Button } from "antd";
 import ArrowLeftIcon from "../components/ArrowLeftIcon";
@@ -55,7 +54,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      {/* Section 1: Header */}
+      {/* Header */}
       <Row justify="center" className="header-row">
         <Col>
         <div className="header-wrapper">
@@ -73,7 +72,7 @@ const App: React.FC = () => {
         </Col>
       </Row>
 
-      {/* Section 2: Carousel */}
+      {/*Carousel */}
       <div className="carousel-container">
 
         <div className="features-wrapper" ref={wrapperRef}>
@@ -99,7 +98,7 @@ const App: React.FC = () => {
             </Card>
           ))}
         </div>
-{/* ปุ่มลูกศรจัดชิดกันตรงกลาง */}
+        {/* ปุ่มลูกศรจัดชิดกันตรงกลาง */}
         <div className="arrow-wrapper">
           <Button
           shape="circle"

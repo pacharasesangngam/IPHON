@@ -1,4 +1,4 @@
-// src/components/ArrowRightIcon.tsx
+
 import React from "react";
 
 const ArrowRightIcon: React.FC = () => (
