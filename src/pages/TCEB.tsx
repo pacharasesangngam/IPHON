@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import { Row, Col, Space, Typography, Button } from "antd";
-import ArrowLeftIcon from "../components/ArrowLeftIcon";
-import ArrowRightIcon from "../components/ArrowRightIcon";
+import  { useRef } from "react";
+import { Space, Typography, Button } from "antd";
+import ArrowLeftIcon from "../components/Arrow/ArrowLeftIcon";
+import ArrowRightIcon from "../components/Arrow/ArrowRightIcon";
 import FeatureCard from "../components/Card/FeatureCard";
 import "antd/dist/reset.css";
 import "./CarouselSection.css";
@@ -55,10 +55,9 @@ export default function App() {
   return (
     <div className="app-container">
       {/* Header */}
-      <Row justify="center">
-        <Col>
+
           <div className="header-wrapper">
-            <Space direction="vertical">
+            <Space direction="vertical" size={1}>
               <Title level={2}  className="header-title"style={{ fontSize: 48}}>
                 Medium length section heading goes here
               </Title>
@@ -67,19 +66,17 @@ export default function App() {
               </Paragraph>
             </Space>
           </div>
-        </Col>
-      </Row>
 
       {/* Carousel */}
-      <div className="carousel-container">
+      <div className="carousel-container"  >
         {/* แถวการ์ด */}
-        <div className="features-wrapper" ref={wrapRef}>
+        <div className="features-wrapper" ref={wrapRef} >
           {features.map((f, i) => (
             <FeatureCard key={i} {...f} />
           ))}
         </div>
 
-        {/* ปุ่มลูกศร (อยู่ภายใน container เดียวกัน) */}
+        {/* ปุ่มลูกศร */}
         <div className="arrow-wrapper">
           <Button
             shape="circle"

@@ -1,86 +1,68 @@
 
-
-/* ใช้กับ <div className="app-container"> */
+/* ─────────────────────────── Layout หลัก ─────────────────────────── */
 
 .app-container {
   width: 1440px;
   height: 1033px;
   margin: 0 auto;
-  padding: 108px 64px 108px 64px  ;
+  padding: 108px 64px;            /* บน–ล่าง | ซ้าย–ขวา */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  opacity: 1;
-  transform: rotate(0deg);
-  background-color: #FFFDFB;
-}
+  background: #FFFDFB;
+  border: 2px solid #2CC7FF;    /* ↞ DEBUG */}
 
-/* ใช้กับ <Row className="header-row" justify="center"> */
-.header-row {
-  display: flex;
-  justify-content: center;
-}
+/* ─────────────────────────── Header ─────────────────────────── */
 
-/* ใส่รอบ <Space> อีกชั้น: <div className="header-wrapper"> */
 .header-wrapper {
   width: 1312px;
+  /* สูง 137px เฉพาะดีไซน์ที่ใช้ h2 28px; ถ้าใช้ h2 48px ให้ลดเป็น ~110px */
   height: 137px;
-  padding: 108px 64px;
-  margin: 0 auto;
+  margin: 0 auto 40px;           /* เว้นระยะลงล่าง 40px */
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
+  align-items: center;           /* กึ่งกลางแนวนอน */
+  justify-content: center;       /* กึ่งกลางแนวตั้ง */}
 
-/* ใช้กับ <Space className="header-space" direction="vertical"  */
-.header-space {
+/* ระยะ Title ↔ Subtitle */
+.header-space.ant-space-vertical {
+  gap: 16px;                     /* ปรับตามดีไซน์ (16 / 23 px) */
   text-align: center;
 }
 
-/* ใช้กับ <Title className="header-title" level={2}> */
+/* หัวข้อ */
 .header-title {
-  
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;          /* SemiBold */
-  font-style: normal;        /* Regular for SemiBold */
-  line-height: 120%;         /* ถ้าต้องการใช้แบบเปอร์เซ็นต์ */
-  letter-spacing: -1%;       /* ลดช่องว่างตัวอักษร 1% */
-  text-align: center;        /* จัดข้อความกึ่งกลาง */
-}
-
-/* ใช้กับ <Paragraph className="header-subtitle"> */
-.header-subtitle {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+  margin: 0;                     /* ตัด margin AntD */
+  font: 600 48px/58px "Poppins", sans-serif;
+  letter-spacing: -0.01em;
   text-align: center;
+  border: 2px solid #2CC7FF;    /* ↞ DEBUG */
 }
 
-
-/* ใช้กับ <Row className="features-row" justify="center"> */
-.features-row {
-  display: flex;
-  justify-content: center;
+/* คำอธิบายใต้หัวข้อ */
+.header-subtitle {
+  margin: 0;                     /* ตัด margin AntD */
+  font: 400 20px/28px "Poppins", sans-serif;
+  text-align: center;
+  border: 2px solid #2CC7FF;    /* ↞ DEBUG */
 }
 
-/* ใช้กับ <div className="features-wrapper"> */
+/* ─────────────────────────── Carousel / Features ─────────────────────────── */
+
 .features-wrapper {
-
   width: 1382px;
   height: 554px;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
   margin: 0 auto;
   display: flex;
+  gap: 16px;                     /* ระยะระหว่างการ์ด */
   overflow-x: auto;
   scroll-behavior: smooth;
-  -ms-overflow-style: none;  /* ซ่อน scrollbar ใน IE และ Edge */
-    scrollbar-width: none;     /* ซ่อน scrollbar ใน Firefox */
+  scrollbar-width: none;    
+  border: 2px solid #2CC7FF;    /* ↞ DEBUG */    
+  overflow-y:hidden;
 }
 
+.features-wrapper::-webkit-scrollbar { display: none; }
 .arrow-wrapper {
   margin-top: 40px;
   display: flex;
