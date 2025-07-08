@@ -1,0 +1,156 @@
+/* src/App.css */
+
+/* ใช้กับ <div className="app-container"> */
+
+.app-container {
+  width: 1440px;
+  height: 1033px;
+  margin: 0 auto;
+  padding: 108px 64px 108px 64px  ;
+  display: flex;
+  flex-direction: column;
+  gap: 79px;
+  box-sizing: border-box;
+  opacity: 1;
+  transform: rotate(0deg);
+  background-color: #FFFDFB;
+}
+
+/* ใช้กับ <Row className="header-row" justify="center"> */
+.header-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* ใส่รอบ <Space> อีกชั้น: <div className="header-wrapper"> */
+.header-wrapper {
+  width: 1312px;
+  height: 137px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ใช้กับ <Space className="header-space" direction="vertical"  */
+.header-space {
+  text-align: center;
+}
+
+/* ใช้กับ <Title className="header-title" level={2}> */
+.header-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;          /* SemiBold */
+  font-style: normal;        /* Regular for SemiBold */
+  font-size: 28px;           /* Text Sizes / Heading 2 */
+  line-height: 120%;         /* ถ้าต้องการใช้แบบเปอร์เซ็นต์ */
+  letter-spacing: -1%;       /* ลดช่องว่างตัวอักษร 1% */
+  text-align: center;        /* จัดข้อความกึ่งกลาง */
+}
+
+/* ใช้กับ <Paragraph className="header-subtitle"> */
+.header-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+
+/* ใช้กับ <Row className="features-row" justify="center"> */
+.features-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* ใช้กับ <div className="features-wrapper"> */
+.features-wrapper {
+
+  width: 1382px;
+  height: 554px;
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* ซ่อน scrollbar ใน IE และ Edge */
+    scrollbar-width: none;     /* ซ่อน scrollbar ใน Firefox */
+}
+
+/* ใช้กับ <Card className="feature-card"> */
+.feature-card {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 554px;
+  border-radius: 17px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* แทน bodyStyle ใน Card */
+.feature-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 51px 86px 210px 86px;
+  height: 100%;
+}
+
+/* ใช้กับ <img className="feature-img" /> */
+.feature-img {
+  width: 228px;
+  height: 293px;
+}
+
+/* ใช้กับ <Space className="feature-text" direction="vertical" size={18}> */
+.feature-text {
+  width: 340px;
+margin-top: 41px;
+  text-align: center;
+}
+
+/* ใช้กับ <Title className="feature-title" level={4}> */
+.feature-title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* ใช้กับ <Paragraph className="feature-desc"> */
+.feature-desc {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.88);
+}
+.arrow-wrapper {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;   /* ระยะห่างระหว่าง pill แต่ละอัน */
+}
+/* สไตล์ปุ่มลูกศร */
+.arrow-btn {
+  box-sizing: border-box;
+  background: #EAEAEA;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  
+}
+
+
+
