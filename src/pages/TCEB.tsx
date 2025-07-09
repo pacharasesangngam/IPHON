@@ -1,5 +1,5 @@
-import  { useRef } from "react";
-import { Space, Typography, Button } from "antd";
+import { useRef } from "react";
+import { Space, Typography} from "antd";
 import ArrowLeftIcon from "../components/Arrow/ArrowLeftIcon";
 import ArrowRightIcon from "../components/Arrow/ArrowRightIcon";
 import FeatureCard from "../components/Card/FeatureCard";
@@ -55,17 +55,16 @@ export default function App() {
   return (
     <div className="app-container">
       {/* Header */}
-
-          <div className="header-wrapper">
-            <Space direction="vertical" size={1}>
-              <Title level={2}  className="header-title"style={{ fontSize: 48}}>
-                Medium length section heading goes here
-              </Title>
-              <Paragraph className="header-subtitle">
-                Unlock a world of convenience and connectivity with the Present Mobile App. Download now to enhance your daily life with our innovative features!
-              </Paragraph>
-            </Space>
-          </div>
+      <div className="header-wrapper">
+        <Space direction="vertical" size={1}>
+          <Title level={2} className="header-title" style={{ fontSize: 40 }}>
+            Discover the Features That Make Us Stand Out
+          </Title>
+          <Paragraph className="header-subtitle">
+            Unlock a world of convenience and connectivity with the Present Mobile App. Download now to enhance your daily life with our innovative features!
+          </Paragraph>
+        </Space>
+      </div>
 
       {/* Carousel */}
       <div className="carousel-container"  >
@@ -78,20 +77,12 @@ export default function App() {
 
         {/* ปุ่มลูกศร */}
         <div className="arrow-wrapper">
-          <Button
-            shape="circle"
-            className="arrow-btn"
-            size="large"
-            icon={<ArrowLeftIcon />}
-            onClick={() => scroll("prev")}
-          />
-          <Button
-            size="large"
-            shape="circle"
-            className="arrow-btn"
-            icon={<ArrowRightIcon />}
-            onClick={() => scroll("next")}
-          />
+          <button className="custom-arrow-btn" onClick={() => scroll("prev")}>
+            <ArrowLeftIcon />
+          </button>
+          <button className="custom-arrow-btn" onClick={() => scroll("next")}>
+            <ArrowRightIcon />
+          </button>
         </div>
       </div>
     </div>
