@@ -15,7 +15,7 @@
 
 .header-wrapper {
   width: 100%;
-  max-width: 800px;
+  max-width: 1312px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,6 @@
   font-size: 20px;
   line-height: 28px;
   text-align: center;
-  max-width: 600px;
   margin-inline: auto;
   padding: 0 16px;
 }
